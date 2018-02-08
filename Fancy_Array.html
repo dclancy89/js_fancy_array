@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fancy Array</title>
+	</head>
+	<body>
+		See console.
+
+		<script>
+			var arr = ["James", "Jill", "Jane", "Jack"];
+
+
+
+			function fancyArray(arr, symbol = "->", reverse = false){
+
+				// check if you should reverse the array
+				if(reverse == true) {
+					
+					for(var i = arr.length-1; i >= 0; i--) {
+						console.log(i + " " + symbol + " " + arr[i]);
+					}
+				} else {
+					for(var i = 0; i < arr.length; i++) {
+						console.log(i + " " + symbol + " " + arr[i]);
+					}
+				}
+			}
+
+			// Default Fancy Array
+			fancyArray(arr);
+			console.log("");
+
+			// Custom Symbol
+			fancyArray(arr, "...");
+			console.log("");
+
+			// Custom Symbol with reverse
+			fancyArray(arr, ":::", true);
+			console.log("");
+			
+		</script>
+	</body>
+</html>
